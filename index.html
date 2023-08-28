@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+     function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('show');
+      }
+    </script>      
     <title>Odin Recipes</title>
 </head>
 <body>
     <nav class="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="recipes/">Recipes</a>
+        </div>
       </nav>
 
     <h1 class="page-title">Odin Recipes</h1>
