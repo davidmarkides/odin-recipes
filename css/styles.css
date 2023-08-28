@@ -146,8 +146,15 @@ div.main-content {
 .recipe-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px; /* Space between the two columns */
+  gap: 20px;
+}
+
+/* Mobile-friendly adjustments */
+@media screen and (max-width: 768px) {
+  .recipe-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Ingredients List */
