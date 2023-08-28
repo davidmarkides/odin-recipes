@@ -3,7 +3,20 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Main Content Div */
+/* Logo container */
+.logo {
+  text-align: center;
+}
+
+/* Logo image */
+.logo img {
+  width: 300px;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: inline-block;
+}
+
 /* Keyframe animation for slide-in effect */
 @keyframes slide-in {
   0% {
@@ -15,6 +28,8 @@ body {
     opacity: 1; /* End with opacity 1 */
   }
 }
+
+/* Main Content Div */
 div.main-content {
   max-width: 800px;
   margin: 20px auto;
@@ -27,10 +42,8 @@ div.main-content {
 }
 
 /* Main Title */
-.main {
-  font-size: 36px;
-  margin-bottom: 16px;
-  color: #333;
+.main-content .title {
+  text-align: center;
 }
 
 /* Image */
@@ -38,6 +51,7 @@ div.main-content {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 400px;
   margin: 16px auto;
   border-radius: 8px;
 }
@@ -50,12 +64,12 @@ div.main-content {
   margin-top: 16px;
 }
 
-/* Modern Minimalistic Navbar */
+/* Navbar */
 .navbar {
   background-color: #fff; /* White background */
   box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.1); /* Shadow only on the bottom */
   display: flex; /* Use Flexbox for layout */
-  justify-content: flex-end; /* Align items to the end (right) */
+  justify-content: space-around; /* Align items to the end (right) */
   align-items: center; /* Center items vertically */
   height: 60px; /* Fixed height */
 }
@@ -80,7 +94,6 @@ div.main-content {
 .nav-links {
   display: flex;
   width: 100%;
-  justify-content: flex-end;
 }
 
 @media screen and (max-width: 768px) {
@@ -221,13 +234,41 @@ div.main-content {
 /* Item Boxes */
 .item-box {
   flex: 1;
-  padding: 20px;
+  padding: 50px;
   background-color: #f9f9f9;
-  border: 1px solid #ccc;
   border-radius: 10px; /* Slightly curved borders */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
   text-align: center;
   transition: all 0.3s ease; /* Hover effect */
+  position: relative; /* Allows for absolute positioning within this box */
+  min-height: 300px; /* Minimum height to ensure boxes are of similar height */
+}
+
+/* Image Styling */
+.item-box img {
+  width: 500px; /* specify width */
+  height: 400px; /* specify height */
+  object-fit: cover; /* will cover the whole content box, potentially cropping the image */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Link Styling */
+.item-box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* For mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .item-box img {
+    max-width: 90%;
+  }
+
+  .item-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Hover Effect */
@@ -236,10 +277,4 @@ div.main-content {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.page-title {
-  font-size: 36px;
-  color: #333;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
+

@@ -1,38 +1,41 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <script>
-     function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('show');
-      }
-    </script>      
-    <title>Odin Recipes</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="scripts.js"></script>
+        <title>Odin Recipes</title>
 </head>
+
 <body>
+
     <nav class="navbar">
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="recipes/">Recipes</a>
+            <a href="index.html">Home</a>
         </div>
-      </nav>
+    </nav>
+</div>
 
-    <h1 class="page-title">Odin Recipes</h1>
+    <div class="logo">
+        <a href="index.html"><img id="logo" src="images/odin-logo.png" alt="Odin recipes"></a>
+    </div>
 
     <div class="item-container">
         <div class="item-box">
-            <a href="recipes/cyprus-stuffed-vine-leaves.html">Koupepia: Cypriot Stuffed Vine Leaves</a>
+            <a href="recipes/cypriot-stuffed-vine-leaves.html"><img src="images/cypriot-stuffed-vine-leaves.jpg" alt="Koupepia: Cypriot Stuffed Vine Leaves">Koupepia: Cypriot Stuffed Vine Leaves</a>
         </div>
+
         <div class="item-box">
-            <a href="recipes/mexican-quesadillas.html">Mexican Quesadillas</a>
+            <a href="recipes/mexican-quesadillas.html"><img src="images/mexican-quesadilla.jpeg" alt="Mexican Quesadillas">Mexican Quesadillas</a>
         </div>
+        
         <div class="item-box">
-            <a href="recipes/greek-baklava.html">Greek Baklava</a>
+            <a href="recipes/greek-baklava.html"><img src="images/greek-baklava.jpeg" alt="Greek Baklava">Greek Baklava</a>
         </div>
-      </div>
+    </div>
 </body>
+
 </html>
