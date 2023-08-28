@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
+    <script>
+        function toggleMenu() {
+           const navLinks = document.querySelector('.nav-links');
+           navLinks.classList.toggle('show');
+         }
+       </script> 
     <title>Cypriot Stuffed Vine Leaves</title>
 </head>
     <body>
-        <nav class="navbar">
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            <a href="../index.html">Home</a>
-            <a href="recipes/">Recipes</a>
-        </nav>
+            <nav class="navbar">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="recipes/">Recipes</a>
+                </div>
+              </nav>
+
     <div class="main-content">
         <h1 class="main">Koupepia: Cypriot Stuffed Vine Leaves</h1>
         <img src="../images/koupepia.jpg" height="auto" width="400px" alt="cyprus-stuffed-vine-leaves">
